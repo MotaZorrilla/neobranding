@@ -2,10 +2,12 @@
 <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/favicon.jpeg" alt="NeoBranding">NeoBranding</a></h1>
+      {{-- <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo.png" alt="NeoBranding">NeoBranding</a></h1> --}}
 
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="logo-container" style="background-color: #fff; backdrop-filter: blur(5px);">
+        <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid" ></a>
+      </div>
 
       <nav id="navbar" class="navbar">
         <ul>
