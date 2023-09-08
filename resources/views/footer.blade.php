@@ -20,13 +20,27 @@
         <div class="row d-flex justify-content-center"">
 
           <div class="col-lg-4 col-md-6 footer-contact">
-            <h3>Neobranding</h3>
+            <h3>Neobranding Venezuela</h3>
             <p>
               Ciudad Guayana <br>
               Estado Bolívar<br>
               Venezuela <br><br>
               <strong>Phone:</strong> +58 414-9985973<br>
-              <strong>Email:</strong> info@neobranding.com.ve<br>
+              <strong>Email:</strong> <a href="mailto:info@neobranding.com.ve">
+              info@neobranding.com.ve</a><br>
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6 footer-contact">
+          </div>
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>Neobranding Chile</h3>
+            <p>
+              Gran Concepción <br>
+              Región del Bio Bio<br>
+              Chile <br><br>
+              <strong>Phone:</strong> +56 9322 77455<br>
+              <strong>Email:</strong> <a href="mailto:info@neobranding.cl">
+                info@neobranding.cl</a><br>
             </p>
           </div>
 
@@ -41,25 +55,25 @@
             </ul>
           </div> --}}
 
-          <div class="col-lg-4 col-md-6 footer-links">
+          {{-- <div class="col-lg-4 col-md-6 footer-links">
             <h4>Nuestras Redes Sociales</h4>
             <p>Síguenos en nuestras redes sociales para estar al día de nuestras últimas noticias y promociones.</p>
             <div class="social-links mt-3">
-              {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> --}}
+              {{-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> 
               <a href="https://www.instagram.com/neobranding.ve/"               class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="https://www.facebook.com/profile.php?id=100063775674604" class="facebook"><i class="bx bxl-facebook"></i></a>
               
-              {{-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> --}}
-            </div>
-          </div>
+               <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> 
+           </div>
+          </div> --}} 
 
         </div>
       </div>
     </div>
 
     <!-- ======= Clients Section ======= -->
-    @include('clients')
+    {{-- @include('clients') --}}
 
     <div class="container footer-bottom clearfix">
       <div class="copyright">

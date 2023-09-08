@@ -17,29 +17,29 @@
                   <h4>René Ambiado</h4>
                   <span>Chief Executive Officer</span>
                   <p>Más de 20 años de experiencia en el marketing digital</p>
-                  <div class="social">
+                  {{-- <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>
   
             <div class="col-lg-6 mt-4 mt-lg-0">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="assets/img/team/liz.jpeg" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="assets/img/team/liz.jpg" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Liz Ruiz</h4>
                   <span>Content Manager</span>
                   <p>Licenciada en derecho, proactiva y disciplinada</p>
-                  <div class="social">
+                  {{-- <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>
@@ -51,12 +51,12 @@
                   <h4>Héctor Mota</h4>
                   <span>CTO</span>
                   <p>Ingeniero y entusiasta de las TI</p>
-                  <div class="social">
+                  {{-- <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>
@@ -68,49 +68,49 @@
                   <h4>Yetzibel España</h4>
                   <span>Community Manager</span>
                   <p>Alegre y atenta con el publico</p>
-                  <div class="social">
+                  {{-- <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>
   
             <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="assets/img/team/simon.jpeg" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="assets/img/team/simon.jpg" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Simón Boada</h4>
                   <span>Director de Marketing</span>
                   <p>Enfocado y solucionador</p>
-                  <div class="social">
+                  {{-- <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>
   
-            {{-- <div class="col-lg-6 mt-4">
+            <div class="col-lg-6 mt-4">
               <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="assets/img/team/gregorio.jpg" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Gregorio España</h4>
                   <span>Diseñador Gráfico</span>
                   <p>Creativo, detallista y raudo</p>
-                  <div class="social">
+                  {{-- <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
                     <a href=""><i class="ri-facebook-fill"></i></a>
                     <a href=""><i class="ri-instagram-fill"></i></a>
                     <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
-            </div> --}}
+            </div> 
   
           </div>
   

@@ -8,7 +8,7 @@
               <p> Contáctanos y descubre cómo podemos ayudarte.</p>
             </div>
             <div class="col-lg-3 cta-btn-container text-center">
-              <a class="cta-btn align-middle" href="#">Contactanos</a>
+              <a class="cta-btn align-middle" href="#contact">Contactanos</a>
             </div>
           </div>
   

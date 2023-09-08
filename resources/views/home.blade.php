@@ -39,7 +39,7 @@
     @include('team')
 
     <!-- ======= Pricing Section ======= -->
-    @include('pricing')
+    {{-- @include('pricing') --}}
 
     <!-- ======= Cta Section ======= -->
     @include('cta3')
