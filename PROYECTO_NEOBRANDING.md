@@ -1,7 +1,7 @@
 # 🚀 PROYECTO NEOBRANDING 2.0 - MANIFIESTO Y BITÁCORA
 
 > **Estado:** En Desarrollo Activo  
-> **Versión:** 2.1.0  
+> **Versión:** 2.2.0  
 > **Fecha de Actualización:** Enero 2026  
 > **Desarrollado por:** @MotaZorrilla
 
@@ -22,35 +22,45 @@ Refrescar radicalmente la presencia digital de Neobranding, transformándola de 
 
 ## 📜 3. BITÁCORA DE PROGRESO
 
-### ✅ Fase 1: Cimientos y Estética (Completado)
+### ✅ Fase 1: Cimientos y Estética
 *   **Infraestructura:** Servidores Vite + Laravel configurados y corriendo en entorno XAMPP.
 *   **Assets:** Sistema de rutas corregido para portabilidad total (`/public/images` -> relativa).
 *   **Efectos Visuales:** Implementación de *Background Beams* en el Hero para profundidad visual.
-*   **Navegación:** Navbar reactivo con efectos de blur y botón "Volver Arriba" flotante.
 *   **Identidad:** Firma digital ASCII "MotaZ" inyectada en el código fuente (`app.blade.php`).
 
-### ✅ Fase 2: Ingeniería Integral (Completado)
+### ✅ Fase 2: Ingeniería Integral
 *   **Sección Engineering Lab:**
     *   Diseño dividido: **Software Lab** (Iconografía técnica) vs **Proyectos de Ingeniería** (Galería Visual).
     *   **Interactividad:** 
         *   *Hover:* Reproducción automática de video preview (muted).
         *   *Click:* Modal inmersivo a pantalla completa con video y audio.
-    *   **Contenido Real:** Migración de renders y videos de proyectos físicos (Altos de Guayana, Posadas, etc.).
+    *   **Contenido Real:** Migración de renders y videos de proyectos físicos (Apartamento, Fachada, Posada, etc.).
 
-### ✅ Fase 3: Portafolio y Marca Personal (Completado)
+### ✅ Fase 3: Portafolio y UX Avanzada
 *   **Sección About/AI:** Perfil profesional destacando liderazgo en IA e ingeniería.
 *   **Refinamiento de Portafolio:**
-    *   Curaduría de 4 proyectos clave.
-    *   Layout optimizado: Tarjetas verticales (9:16) compactas para mayor nitidez.
-    *   Estética coherente con la sección de ingeniería.
+    *   Layout asimétrico y dinámico (3 verticales + 1 horizontal panorámico).
+    *   **Lightbox:** Implementación de modal para visualizar imágenes a pantalla completa.
+*   **UX:** Botón "Volver Arriba" (Back to Top) flotante y persistente.
+
+### ✅ Fase 5: Expansión Regional y Asistente IA (Últimos Avances)
+*   **Sección de Contacto Regional:**
+    *   Implementación de dos bloques estratégicos: **Chile** (René Enviado - Director General) y **Venezuela** (Héctor Mota - Representante).
+    *   **Integración WhatsApp:** Botones funcionales con enlaces directos (`wa.me`) e iconografía dedicada.
+    *   **Diseño Visual:** Composición fotográfica ajustada con máscaras de color suave y posicionamiento preciso.
+*   **Neo AI Assistant:**
+    *   Desarrollo de un **Asistente Virtual** moderno (SVG + Framer Motion) que flota sobre el botón de navegación.
+    *   **Funcionalidad Prototipo:** Ventana de chat interactiva con interfaz *Glassmorphism*, simulación de escritura y respuestas inteligentes precargadas.
+*   **Refinamiento Visual:** Aumento del impacto visual en el Hero, expandiendo la imagen central y añadiendo resplandores dinámicos.
 
 ---
 
 ## 🔮 4. PRÓXIMOS PASOS (Roadmap)
-1.  **Optimización Móvil:** Verificar tamaños de fuentes y padding en dispositivos pequeños.
-2.  **SEO Técnico:** Meta tags dinámicos y Open Graph para redes sociales.
-3.  **Blog de IA:** (Opcional) Sección para publicar artículos técnicos.
-4.  **Despliegue:** Preparación para servidor de producción.
+1.  **Funcionalidad IA Avanzada:** Conectar el asistente "Neo" con una API real (OpenAI/Gemini) para procesar consultas dinámicas.
+2.  **Optimización Call to Action (CTA):** Revisar y mejorar todos los botones de acción para maximizar la conversión y el interés del usuario.
+3.  **Estrategia de Despersonalización Corporativa:** Realizar una transición en la narrativa del sitio, pasando de un enfoque de portafolio personal a una **identidad corporativa de empresa**, resaltando al equipo y la marca Neobranding por encima de las individualidades.
+4.  **Optimización Móvil:** Ajustes finos de responsive para dispositivos pequeños.
+5.  **SEO & Metadatos:** Configuración de Open Graph y etiquetas meta para posicionamiento.
 
 ---
-*Documento generado automáticamente por el Asistente de Desarrollo.*
+*Documento actualizado automáticamente por el Asistente de Desarrollo.*

@@ -48,15 +48,15 @@ export default function Hero() {
 
                 {/* Hero Image / Visual */}
                 <motion.div 
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1.1 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                    className="relative lg:scale-110"
                 >
                     <motion.img 
                         src="images/hero.png" 
                         alt="Hero Digital Art" 
-                        className="w-full max-w-lg mx-auto object-contain drop-shadow-2xl"
+                        className="w-full max-w-2xl mx-auto object-contain drop-shadow-[0_0_50px_rgba(147,51,234,0.3)]"
                         animate={{ y: [0, -20, 0] }}
                         transition={{ 
                             repeat: Infinity, 

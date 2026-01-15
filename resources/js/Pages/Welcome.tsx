@@ -6,6 +6,7 @@ import Services from './Sections/Services';
 import Portfolio from './Sections/Portfolio';
 import Engineering from './Sections/Engineering';
 import About from './Sections/About';
+import Contact from './Sections/Contact';
 import BackToTop from '@/Components/ui/BackToTop';
 
 export default function Welcome({ auth }: PageProps) {
@@ -22,6 +23,7 @@ export default function Welcome({ auth }: PageProps) {
                     <Engineering />
                     <About />
                     <Portfolio />
+                    <Contact />
                 </main>
 
                 <footer className="py-12 bg-slate-950 border-t border-white/5 text-center relative z-10">
