@@ -3,6 +3,8 @@ import { Head } from '@inertiajs/react';
 import Navbar from '@/Components/Navbar';
 import Hero from './Sections/Hero';
 import Services from './Sections/Services';
+import Pricing from './Sections/Pricing';
+import Commercial from './Sections/Commercial';
 import Portfolio from './Sections/Portfolio';
 import Engineering from './Sections/Engineering';
 import About from './Sections/About';
@@ -20,6 +22,8 @@ export default function Welcome({ auth }: PageProps) {
                 <main>
                     <Hero />
                     <Services />
+                    <Pricing />
+                    <Commercial />
                     <Engineering />
                     <About />
                     <Portfolio />

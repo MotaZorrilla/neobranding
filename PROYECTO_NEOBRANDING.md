@@ -1,66 +1,73 @@
-# 🚀 PROYECTO NEOBRANDING 2.0 - MANIFIESTO Y BITÁCORA
+# 🚀 NEOBRANDING 2.0 - ECOSISTEMA DIGITAL UNIFICADO
 
-> **Estado:** En Desarrollo Activo  
-> **Versión:** 2.2.0  
-> **Fecha de Actualización:** Enero 2026  
-> **Desarrollado por:** @MotaZorrilla
-
----
-
-## 🎯 1. OBJETIVO PRINCIPAL
-Refrescar radicalmente la presencia digital de Neobranding, transformándola de un sitio web informativo estático a una **experiencia digital inmersiva ("Sublime")**. El sitio proyecta innovación técnica y diseño de vanguardia, alineado con las tendencias globales de 2025/2026.
-
-## 🛠️ 2. STACK TECNOLÓGICO ("TOPE DE GAMA")
-*   **Backend:** Laravel 11 (Gestión robusta, seguridad).
-*   **SPA Bridge:** Inertia.js (Monolito moderno).
-*   **Frontend:** React (Ecosistema UI líder).
-*   **Estilos:** Tailwind CSS (Utility-first).
-*   **Animaciones:** Framer Motion (Transiciones complejas, scroll-triggered).
-*   **Componentes:** Shadcn/ui & Custom (Glassmorphism, Bento grids).
+> **Estado:** Fase de Unificación Completada  
+> **Versión:** 3.0.0 (The Most Modern Product)  
+> **Última Actualización:** Marzo 2026  
+> **Liderado por:** @MotaZorrilla
 
 ---
 
-## 📜 3. BITÁCORA DE PROGRESO
+## 🎯 1. VISIÓN DEL PRODUCTO
+Transformar la presencia digital de Neobranding en una **experiencia inmersiva y comercialmente agresiva**. El sitio actual es la fusión definitiva entre un **Software Lab de alta gama** y una **Agencia de Branding Estratégico**, diseñado con los estándares más altos de 2026.
 
-### ✅ Fase 1: Cimientos y Estética
-*   **Infraestructura:** Servidores Vite + Laravel configurados y corriendo en entorno XAMPP.
-*   **Assets:** Sistema de rutas corregido para portabilidad total (`/public/images` -> relativa).
-*   **Efectos Visuales:** Implementación de *Background Beams* en el Hero para profundidad visual.
-*   **Identidad:** Firma digital ASCII "MotaZ" inyectada en el código fuente (`app.blade.php`).
-
-### ✅ Fase 2: Ingeniería Integral
-*   **Sección Engineering Lab:**
-    *   Diseño dividido: **Software Lab** (Iconografía técnica) vs **Proyectos de Ingeniería** (Galería Visual).
-    *   **Interactividad:** 
-        *   *Hover:* Reproducción automática de video preview (muted).
-        *   *Click:* Modal inmersivo a pantalla completa con video y audio.
-    *   **Contenido Real:** Migración de renders y videos de proyectos físicos (Apartamento, Fachada, Posada, etc.).
-
-### ✅ Fase 3: Portafolio y UX Avanzada
-*   **Sección About/AI:** Perfil profesional destacando liderazgo en IA e ingeniería.
-*   **Refinamiento de Portafolio:**
-    *   Layout asimétrico y dinámico (3 verticales + 1 horizontal panorámico).
-    *   **Lightbox:** Implementación de modal para visualizar imágenes a pantalla completa.
-*   **UX:** Botón "Volver Arriba" (Back to Top) flotante y persistente.
-
-### ✅ Fase 5: Expansión Regional y Asistente IA (Últimos Avances)
-*   **Sección de Contacto Regional:**
-    *   Implementación de dos bloques estratégicos: **Chile** (René Enviado - Director General) y **Venezuela** (Héctor Mota - Representante).
-    *   **Integración WhatsApp:** Botones funcionales con enlaces directos (`wa.me`) e iconografía dedicada.
-    *   **Diseño Visual:** Composición fotográfica ajustada con máscaras de color suave y posicionamiento preciso.
-*   **Neo AI Assistant:**
-    *   Desarrollo de un **Asistente Virtual** moderno (SVG + Framer Motion) que flota sobre el botón de navegación.
-    *   **Funcionalidad Prototipo:** Ventana de chat interactiva con interfaz *Glassmorphism*, simulación de escritura y respuestas inteligentes precargadas.
-*   **Refinamiento Visual:** Aumento del impacto visual en el Hero, expandiendo la imagen central y añadiendo resplandores dinámicos.
+### 🛠️ STACK TECNOLÓGICO ("TOPE DE GAMA")
+*   **Core:** Laravel 12 + Inertia.js (Monolito SPA).
+*   **UI Engine:** React 18 + Framer Motion 12 (Animaciones Premium).
+*   **Estilos:** Tailwind CSS 4.0 (Utility-first moderno).
+*   **Componentes:** Shadcn/ui + Custom Glassmorphism.
+*   **IA:** Neo AI Assistant (Arquitectura de Agente Prototipo).
 
 ---
 
-## 🔮 4. PRÓXIMOS PASOS (Roadmap)
-1.  **Funcionalidad IA Avanzada:** Conectar el asistente "Neo" con una API real (OpenAI/Gemini) para procesar consultas dinámicas.
-2.  **Optimización Call to Action (CTA):** Revisar y mejorar todos los botones de acción para maximizar la conversión y el interés del usuario.
-3.  **Estrategia de Despersonalización Corporativa:** Realizar una transición en la narrativa del sitio, pasando de un enfoque de portafolio personal a una **identidad corporativa de empresa**, resaltando al equipo y la marca Neobranding por encima de las individualidades.
-4.  **Optimización Móvil:** Ajustes finos de responsive para dispositivos pequeños.
-5.  **SEO & Metadatos:** Configuración de Open Graph y etiquetas meta para posicionamiento.
+## 🏛️ 2. ARQUITECTURA DEL ECOSISTEMA
+El sitio unifica cuatro mundos en una sola interfaz fluida:
+
+1.  **Engineering Lab:** División entre *Software Engineering* (Laravel/React) e *Industrial Engineering* (Renders 3D/Video).
+2.  **Brand Intelligence:** Metodología de marca enfocada en la psicología del consumidor.
+3.  **Soluciones Comerciales:** Hosting Pro, Mini Web QR, Formación e Impresión.
+4.  **Pricing Engine:** Planes "Inicia tu Web" (Básico, Crece, Pro) optimizados para conversión.
 
 ---
-*Documento actualizado automáticamente por el Asistente de Desarrollo.*
+
+## 📜 3. BITÁCORA DE PROGRESO (TRAZABILIDAD)
+
+### ✅ FASE 1: CIMIENTOS Y ESTÉTICA (2025)
+*   Configuración de servidores Vite + Laravel en entorno XAMPP.
+*   Corrección de rutas de assets para portabilidad total.
+*   Inyección de firma ASCII "MotaZ" en el código fuente.
+
+### ✅ FASE 2: INGENIERÍA INTEGRAL
+*   Implementación de la sección **Engineering Lab** con iconografía técnica.
+*   Sistema de *Hover & Play* para videos de proyectos (Renders, Fachadas, Posadas).
+*   Modales inmersivos a pantalla completa para visualización técnica.
+
+### ✅ FASE 3: PORTAFOLIO Y UX AVANZADA
+*   Sección About/AI destacando liderazgo en ingeniería e IA.
+*   Layout de portafolio asimétrico y dinámico.
+*   Implementación de Lightbox y botón "Back to Top" persistente.
+
+### ✅ FASE 4: EXPANSIÓN REGIONAL Y ASISTENTE IA
+*   Configuración de representantes en **Chile** (René Enviado) y **Venezuela** (Héctor Mota).
+*   Integración funcional de WhatsApp Regional (`wa.me`).
+*   Prototipo del **Neo AI Assistant** (SVG + Framer Motion) con interfaz *Glassmorphism*.
+
+### ✅ FASE 5: UNIFICACIÓN ESTRATÉGICA (MARZO 2026)
+*   **Fusión de Contenidos:** Migración de la inteligencia comercial de `neobranding.cl/site` al nuevo stack.
+*   **Ingeniería de Ventas:** Nuevo Hero con copy de alta conversión y sección de Servicios reestructurada.
+*   **Pricing & Commercial:** Implementación de la sección de Planes Web y Soluciones Comerciales (Hosting, QR, etc.).
+
+### ✅ FASE 6: REFINAMIENTO TÉCNICO Y ESTABILIDAD
+*   Actualización a **Tailwind 4.0** y **Laravel 12**.
+*   Corrección de dependencias y conflictos de importación en componentes React.
+*   Optimización de la navegación (Smooth Scroll) y unificación de IDs de sección.
+
+---
+
+## 🔮 4. ROADMAP (PRÓXIMOS PASOS)
+1.  **Conectividad IA:** Vincular a "Neo" con APIs reales (Gemini/OpenAI) para consultas dinámicas del ecosistema.
+2.  **Despersonalización Corporativa:** Transicionar el tono de voz de "Portafolio" a "Identidad de Marca Global".
+3.  **SEO & Metadata:** Implementar Open Graph dinámico para todos los servicios y planes.
+4.  **Optimización LCP:** Ajustes finales para carga instantánea en entornos de baja conectividad.
+
+---
+*Documento estructurado y actualizado por el Asistente de Desarrollo.*

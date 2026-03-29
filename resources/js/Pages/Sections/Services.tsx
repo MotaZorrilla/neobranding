@@ -1,39 +1,43 @@
 import { motion } from 'framer-motion';
-import { Code, Palette, Megaphone, Video, ArrowRight } from 'lucide-react';
+import { Brain, Globe, GraduationCap, LayoutGrid, ArrowRight } from 'lucide-react';
 
 const services = [
     {
-        icon: <Code className="w-8 h-8" />,
-        title: "Desarrollo Web & Apps",
-        description: "Construimos plataformas robustas y escalables utilizando tecnologías de vanguardia como Laravel, React y ecosistemas cloud.",
-        color: "from-blue-500 to-cyan-400"
+        icon: <Brain className="w-8 h-8" />,
+        title: "Marca Inteligente",
+        description: "No solo diseñamos logotipos; creamos identidades que dominan mercados fusionando psicología del consumidor con diseño de vanguardia.",
+        features: ["Brand Intelligence", "Arquitectura de Marca", "Identidad Visual", "Naming"],
+        color: "from-purple-500 to-indigo-600"
     },
     {
-        icon: <Palette className="w-8 h-8" />,
-        title: "Branding & Diseño",
-        description: "Creamos identidades visuales memorables que conectan con tu audiencia. Desde el logotipo hasta el sistema de diseño completo.",
-        color: "from-purple-500 to-pink-500"
+        icon: <Globe className="w-8 h-8" />,
+        title: "Presencia Digital",
+        description: "Ecosistemas digitales donde el diseño UI/UX y el Marketing 360° trabajan para atraer, cautivar y convertir prospectos.",
+        features: ["Desarrollo Web", "Estrategia 360", "SEO & Contenido", "Automatización"],
+        color: "from-blue-500 to-cyan-500"
     },
     {
-        icon: <Megaphone className="w-8 h-8" />,
-        title: "Marketing Digital",
-        description: "Estrategias de crecimiento basadas en datos. SEO, campañas SEM y gestión de redes sociales para maximizar tu alcance.",
-        color: "from-orange-500 to-red-500"
+        icon: <GraduationCap className="w-8 h-8" />,
+        title: "Neobranding Academy",
+        description: "Formación práctica y especializada. Talleres y asesorías para que tú o tu equipo lideren la evolución de su mercado.",
+        features: ["Cursos Online", "Talleres Intensivos", "Asesoría Personalizada", "Metodología Neo"],
+        color: "from-orange-500 to-pink-500"
     },
     {
-        icon: <Video className="w-8 h-8" />,
-        title: "Producción Audiovisual",
-        description: "Contenido multimedia de alto impacto. Edición de video, motion graphics y fotografía corporativa.",
-        color: "from-green-500 to-emerald-400"
+        icon: <LayoutGrid className="w-8 h-8" />,
+        title: "Soluciones Pro",
+        description: "Herramientas diseñadas para acelerar tu negocio: desde hosting de alta velocidad hasta mini-webs de contacto.",
+        features: ["Hosting Premium", "Mini Web QR", "Soluciones de Impresión", "Soporte VIP"],
+        color: "from-emerald-500 to-teal-500"
     }
 ];
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 bg-slate-950 relative overflow-hidden">
+        <section id="services" className="py-32 bg-slate-950 relative overflow-hidden">
             {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div 
@@ -41,11 +45,13 @@ export default function Services() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-16"
+                    className="text-center mb-20"
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Nuestras <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Especialidades</span></h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto">
-                        Fusionamos creatividad y tecnología para impulsar tu marca hacia el futuro digital.
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Ecosistema de <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Servicios</span>
+                    </h2>
+                    <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                        Impulsamos la visibilidad de tu marca fusionando estrategias digitales de vanguardia con soluciones de personalización únicas.
                     </p>
                 </motion.div>
 
@@ -57,25 +63,38 @@ export default function Services() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative p-8 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-white/10 transition-colors overflow-hidden"
+                            className="group relative p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all duration-500 hover:-translate-y-2"
                         >
-                            {/* Hover Gradient Background */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                            {/* Glow Effect */}
+                            <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500 rounded-[2.5rem]`} />
                             
-                            <div className={`mb-6 p-3 rounded-xl bg-slate-800/50 w-fit text-white group-hover:scale-110 transition-transform duration-300 ring-1 ring-white/10`}>
+                            <div className={`mb-8 p-4 rounded-2xl bg-slate-800/50 w-fit text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 ring-1 ring-white/10 shadow-xl`}>
                                 {service.icon}
                             </div>
                             
-                            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
+                            <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
                                 {service.title}
                             </h3>
                             
-                            <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                            <p className="text-slate-400 text-sm leading-relaxed mb-8 h-20">
                                 {service.description}
                             </p>
 
-                            <a href="#" className="inline-flex items-center text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors">
-                                Saber más <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                            <ul className="space-y-3 mb-8">
+                                {service.features.map((feature, fIndex) => (
+                                    <li key={fIndex} className="flex items-center text-xs text-slate-500 gap-2">
+                                        <div className={`w-1 h-1 rounded-full bg-gradient-to-r ${service.color}`} />
+                                        {feature}
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <a href="#" className="inline-flex items-center text-sm font-semibold text-white group/btn">
+                                <span className="relative">
+                                    Explorar más
+                                    <span className="absolute bottom-0 left-0 w-full h-[1px] bg-purple-500 scale-x-0 group-hover/btn:scale-x-100 transition-transform origin-left" />
+                                </span>
+                                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                             </a>
                         </motion.div>
                     ))}
