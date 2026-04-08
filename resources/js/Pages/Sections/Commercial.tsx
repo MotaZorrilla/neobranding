@@ -27,7 +27,7 @@ const solutions = [
         title: "Formación",
         description: "Capacitación técnica y estratégica en Branding e IA. Talleres diseñados para equipos que buscan liderar su mercado.",
         icon: <GraduationCap className="w-8 h-8" />,
-        link: "#about",
+        link: "https://neobranding.cl/cowork/",
         cta: "Saber más",
         color: "from-orange-600/20 to-red-600/20",
         hoverBorder: "group-hover:border-orange-500/50"
