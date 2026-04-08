@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, Cpu, Code2, Database, X, Download, Loader2, Building2, LayoutGrid, CheckCircle2, hardHat, Box } from 'lucide-react';
+import { ShieldCheck, Cpu, Code2, Database, X, Download, Loader2, Building2, LayoutGrid, CheckCircle2, HardHat, Box } from 'lucide-react';
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -86,31 +86,33 @@ export default function About() {
             <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
             
             <div className="container mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">
                     
-                    {/* Visual Side */}
+                    {/* Visual Side - EXPANDIDO */}
                     <motion.div 
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative flex flex-col h-full"
                     >
-                        <div className="relative aspect-square max-w-md mx-auto">
+                        <div className="relative h-full min-h-[500px] lg:min-h-full">
                             <motion.div 
                                 animate={{ rotate: 360 }}
-                                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                                className="absolute -inset-10 border border-white/5 rounded-full border-dashed" 
+                                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                                className="absolute -inset-10 border border-white/5 rounded-full border-dashed pointer-events-none" 
                             />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 via-blue-600/10 to-transparent rounded-[3.5rem] rotate-6 blur-3xl" />
-                            <div className="relative h-full bg-slate-900 border border-white/10 rounded-[3.5rem] p-4 overflow-hidden group shadow-2xl">
+                            <div className="absolute inset-0 bg-gradient-to-tr from-purple-600/20 via-blue-600/10 to-transparent rounded-[3.5rem] rotate-3 blur-3xl" />
+                            
+                            <div className="relative h-full bg-slate-900 border border-white/10 rounded-[3.5rem] p-4 overflow-hidden group shadow-2xl flex flex-col">
                                 <img 
                                     src="images/why.png" 
                                     alt="Neobranding Vision" 
-                                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[2s]" 
+                                    className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[2.5s]" 
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
                                 
-                                <div className="absolute bottom-12 left-10 right-10 p-8 rounded-3xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
+                                {/* Badge de Humanizing - Se mantiene abajo con el mismo estilo */}
+                                <div className="absolute bottom-10 left-8 right-8 p-8 rounded-3xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl">
                                     <div className="text-white font-black text-3xl mb-2 uppercase tracking-tighter italic">Humanizing</div>
                                     <div className="text-blue-400 font-bold text-[10px] uppercase tracking-[0.4em]">The digital evolution 2026</div>
                                 </div>
@@ -119,7 +121,7 @@ export default function About() {
                     </motion.div>
 
                     {/* Content Side */}
-                    <div className="space-y-12">
+                    <div className="space-y-10 flex flex-col justify-center py-4">
                         <div className="space-y-6">
                             <motion.div 
                                 initial={{ opacity: 0, y: 10 }}
@@ -140,7 +142,7 @@ export default function About() {
                         </div>
 
                         {/* Achievements Mini List */}
-                        <div className="grid grid-cols-1 gap-4">
+                        <div className="grid grid-cols-1 gap-4 max-w-xl">
                             {aiAchievements.map((item, idx) => (
                                 <div key={idx} className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 group hover:bg-white/5 transition-all">
                                     <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
@@ -155,7 +157,7 @@ export default function About() {
                         </div>
 
                         {/* THE BUTTON */}
-                        <div className="pt-6">
+                        <div className="pt-4">
                             <button 
                                 onClick={() => setIsModalOpen(true)}
                                 className="relative group p-[2px] rounded-2xl overflow-hidden transition-all hover:scale-[1.03] active:scale-95 shadow-[0_0_50px_rgba(59,130,246,0.2)]"
@@ -173,7 +175,7 @@ export default function About() {
                 </div>
             </div>
 
-            {/* ENHANCED MODAL */}
+            {/* MODAL */}
             <AnimatePresence>
                 {isModalOpen && (
                     <motion.div 

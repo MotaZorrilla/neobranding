@@ -80,23 +80,31 @@ REGLAS DE ORO:
 - Si el usuario deja su WhatsApp, agradécele y dile que un consultor senior lo contactará en breve.";
 
         try {
+            // Confirmado: Usando el modelo de vanguardia gemini-2.5-flash
             $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $apiKey;
 
-            $response = Http::withoutVerifying()->post($url, [
-                'system_instruction' => [
-                    'parts' => [['text' => $systemInstruction]]
-                ],
-                'contents' => [
-                    [
-                        'role' => 'user',
-                        'parts' => [['text' => $userMessage]]
+            // ESTRATEGIA DE RESILIENCIA: Reintentar 3 veces con una espera de 1 segundo entre intentos
+            $response = Http::withoutVerifying()
+                ->retry(3, 1000, function ($exception, $request) {
+                    return $exception instanceof \Illuminate\Http\Client\ConnectionException || 
+                           $exception->getCode() >= 500 || 
+                           $exception->getCode() == 429;
+                })
+                ->post($url, [
+                    'system_instruction' => [
+                        'parts' => [['text' => $systemInstruction]]
+                    ],
+                    'contents' => [
+                        [
+                            'role' => 'user',
+                            'parts' => [['text' => $userMessage]]
+                        ]
+                    ],
+                    'generationConfig' => [
+                        'temperature' => 0.7,
+                        'maxOutputTokens' => 1000,
                     ]
-                ],
-                'generationConfig' => [
-                    'temperature' => 0.7,
-                    'maxOutputTokens' => 1000,
-                ]
-            ]);
+                ]);
 
             if ($response->successful()) {
                 $data = $response->json();
@@ -112,8 +120,13 @@ REGLAS DE ORO:
                 return response()->json(['reply' => $reply]);
             }
 
+            // Manejo específico de Saturación (Rate Limit)
+            if ($response->status() == 429 || $response->status() == 503) {
+                return response()->json(['reply' => 'Neo está procesando muchas consultas en este momento. Por favor, espera un par de segundos y vuelve a enviarme tu mensaje.'], 200);
+            }
+
             Log::error('Gemini Error: ' . $response->body());
-            return response()->json(['reply' => 'Lo siento, tuve un breve error de conexión. ¿Hablamos por WhatsApp?'], 500);
+            return response()->json(['reply' => 'Tuve un breve error de conexión con mi red neuronal. ¿Podrías reintentar?'], 500);
 
         } catch (\Exception $e) {
             Log::error('Chat Exception: ' . $e->getMessage());

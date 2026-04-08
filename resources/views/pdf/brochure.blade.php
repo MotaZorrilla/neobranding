@@ -253,9 +253,15 @@
                 </div>
             </div>
 
-            <div class="img-container">
-                @if($img['partner4']) <img src="{{ $img['partner4'] }}" style="height: 150px; object-fit: contain; background: #fff;"> @endif
-                <div class="img-caption">Global Cloud Infrastructure // Powering {{ $company }}</div>
+            <div style="text-align: center; margin-top: 30px;">
+                <div style="display: inline-block; background: #fff; padding: 25px; border-radius: 20px; width: 180px; line-height: 0;">
+                    @if($img['partner4']) 
+                        <img src="{{ $img['partner4'] }}" style="width: 100%; height: auto;"> 
+                    @endif
+                </div>
+                <div style="font-size: 10px; color: #475569; text-transform: uppercase; font-weight: bold; margin-top: 15px; letter-spacing: 1px;">
+                    Global Cloud Infrastructure // Powering {{ $company }}
+                </div>
             </div>
         </div>
         <div class="footer">Hosting Solutions // {{ $company }} <span class="client-tag">09</span></div>

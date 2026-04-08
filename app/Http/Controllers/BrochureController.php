@@ -5,14 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Lead;
 use App\Models\AnalyticsEvent;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Log;
-use Barryvdh\DomPDF\Facade\Pdf;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class BrochureController extends Controller
 {
     public function download(Request $request)
     {
+        // Forzamos el límite del VPS
+        ini_set('memory_limit', '128M');
+        set_time_limit(120);
+
         try {
             $validated = $request->validate([
                 'name' => 'required|string|max:255',
@@ -22,11 +26,10 @@ class BrochureController extends Controller
                 'interests' => 'required|array',
             ]);
 
-            // Normalización de nombres según instrucción del usuario
             $cleanName = ucwords(strtolower($validated['name']));
             $cleanCompany = strtoupper($validated['company']);
 
-            // 1. Guardar Lead
+            // 1. Registrar Lead
             Lead::create([
                 'name' => $cleanName,
                 'company' => $cleanCompany,
@@ -39,63 +42,99 @@ class BrochureController extends Controller
             // 2. Telemetría
             AnalyticsEvent::log('conversion', 'brochure', implode('|', $validated['interests']));
 
-            // 3. Preparar Imágenes en Base64 (Intercambiamos partner 3 y 4)
+            // 3. Preparar Imágenes Base64 (Ultra optimizadas para 128MB)
             $images = [
-                'why' => $this->base64('images/why.png'),
-                'skills' => $this->base64('images/skills.jpg'),
-                'apartamento' => $this->base64('images/engineering/apartamento.png'),
-                'posada' => $this->base64('images/engineering/posada.png'),
-                'fachada' => $this->base64('images/engineering/Fachada.png'),
-                'partner1' => $this->base64('images/partners/nb-ingenieria.jpg'),
-                'partner2' => $this->base64('images/partners/metros-cuadrados.jpg'),
-                'partner3' => $this->base64('images/partners/neomarketing.jpg'), // Era 4, ahora es 3
-                'partner4' => $this->base64('images/partners/logo-guayanahost.jpg'), // Era 3, ahora es 4
-                'partner5' => $this->base64('images/partners/nb-coworks.jpg'),
-                'partner6' => $this->base64('images/partners/nb-qr.jpg'),
-                'partner7' => $this->base64('images/partners/grupo-ambiado.jpg'),
-                'partner8' => $this->base64('images/partners/logo-mz-personal.jpg'),
+                'why' => $this->base64Optimized('images/why.png', 600),
+                'skills' => $this->base64Optimized('images/skills.jpg', 500),
+                'apartamento' => $this->base64Optimized('images/engineering/apartamento.png', 600),
+                'posada' => $this->base64Optimized('images/engineering/posada.png', 600),
+                'fachada' => $this->base64Optimized('images/engineering/Fachada.png', 600),
+                // Logos de aliados muy pequeñitos para ahorrar RAM
+                'partner1' => $this->base64Optimized('images/partners/nb-ingenieria.jpg', 120),
+                'partner2' => $this->base64Optimized('images/partners/metros-cuadrados.jpg', 120),
+                'partner3' => $this->base64Optimized('images/partners/neomarketing.jpg', 120),
+                'partner4' => $this->base64Optimized('images/partners/logo-guayanahost.jpg', 400),
+                'partner5' => $this->base64Optimized('images/partners/nb-coworks.jpg', 120),
+                'partner6' => $this->base64Optimized('images/partners/nb-qr.jpg', 120),
+                'partner7' => $this->base64Optimized('images/partners/grupo-ambiado.jpg', 120),
+                'partner8' => $this->base64Optimized('images/partners/logo-mz-personal.jpg', 120),
             ];
 
-            // 4. Generar PDF
-            $filename = 'Dossier_Neobranding_' . str_replace(' ', '_', $cleanCompany) . '_' . time() . '.pdf';
-            
-            $pdf = Pdf::loadView('pdf.brochure', [
+            // 4. Renderizar HTML
+            $html = view('pdf.brochure', [
                 'name' => $cleanName,
                 'company' => $cleanCompany,
                 'interests' => $validated['interests'],
                 'img' => $images,
                 'email' => 'neobranding@neobranding.cl'
-            ]);
-            
-            $pdf->setPaper('letter', 'portrait');
+            ])->render();
 
-            if (!Storage::disk('public')->exists('brochures')) {
-                Storage::disk('public')->makeDirectory('brochures');
+            // 5. Configurar Dompdf
+            $options = new Options();
+            $options->set('isRemoteEnabled', true);
+            $options->set('isHtml5ParserEnabled', true);
+            $options->set('defaultFont', 'Helvetica');
+            
+            $dompdf = new Dompdf($options);
+            $dompdf->loadHtml($html);
+            $dompdf->setPaper('letter', 'portrait');
+            $dompdf->render();
+            
+            $filename = 'Dossier_NB_' . time() . '.pdf';
+            $publicPath = public_path('storage/brochures');
+            
+            if (!file_exists($publicPath)) {
+                mkdir($publicPath, 0775, true);
             }
 
-            Storage::disk('public')->put('brochures/' . $filename, $pdf->output());
+            file_put_contents($publicPath . '/' . $filename, $dompdf->output());
 
             return response()->json([
                 'success' => true,
                 'download_url' => asset('storage/brochures/' . $filename),
                 'filename' => "Dossier_Neobranding_{$cleanCompany}.pdf"
             ]);
+
         } catch (\Exception $e) {
-            Log::error('PDF Error: ' . $e->getMessage());
+            Log::error('PDF ERROR: ' . $e->getMessage());
             return response()->json([
                 'success' => false,
-                'error' => $e->getMessage()
+                'error' => 'Error de procesamiento. Intenta con menos áreas seleccionadas.'
             ], 500);
         }
     }
 
-    private function base64($path) {
+    private function base64Optimized($path, $maxWidth = 600) {
         try {
             $fullPath = public_path($path);
             if (!file_exists($fullPath)) return '';
-            $type = pathinfo($fullPath, PATHINFO_EXTENSION);
-            $data = file_get_contents($fullPath);
-            return 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+            list($width, $height, $type) = getimagesize($fullPath);
+            
+            // Redimensionar para ahorrar RAM
+            $ratio = $maxWidth / $width;
+            $newWidth = $maxWidth;
+            $newHeight = $height * $ratio;
+
+            $src = null;
+            switch ($type) {
+                case IMAGETYPE_JPEG: $src = imagecreatefromjpeg($fullPath); break;
+                case IMAGETYPE_PNG:  $src = imagecreatefrompng($fullPath);  break;
+                case IMAGETYPE_WEBP: $src = imagecreatefromwebp($fullPath); break;
+                default: return '';
+            }
+
+            $dst = imagecreatetruecolor($newWidth, $newHeight);
+            imagecopyresampled($dst, $src, 0, 0, 0, 0, $newWidth, $newHeight, $width, $height);
+
+            ob_start();
+            imagejpeg($dst, null, 90); // Calidad 90 para logos nítidos
+            $data = ob_get_clean();
+
+            imagedestroy($src);
+            imagedestroy($dst);
+
+            return 'data:image/jpeg;base64,' . base64_encode($data);
         } catch (\Exception $e) {
             return '';
         }

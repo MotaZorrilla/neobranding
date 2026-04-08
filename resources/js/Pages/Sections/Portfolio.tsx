@@ -235,7 +235,7 @@ export default function Portfolio() {
                                                             e.currentTarget.currentTime = 0;
                                                         }}
                                                     />
-                                                    <img src={project.thumbnail} className="w-full h-full object-cover transition-all duration-500" />
+                                                    <img src={(project as any).thumbnail || project.image} className="w-full h-full object-cover transition-all duration-500" />
                                                     <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:opacity-0 transition-opacity">
                                                         <div className="w-14 h-14 rounded-full bg-purple-600/20 backdrop-blur-md flex items-center justify-center border border-purple-500/30 group-hover:scale-110 transition-transform">
                                                             <Play className="w-6 h-6 text-white fill-white" />

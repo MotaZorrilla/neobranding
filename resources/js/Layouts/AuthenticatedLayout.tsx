@@ -150,7 +150,7 @@ export default function Authenticated({
                                     </div>
                                 </button>
                             </Dropdown.Trigger>
-                            <Dropdown.Content align="bottom">
+                            <Dropdown.Content align="right">
                                 <Dropdown.Link href={route('profile.edit')}>Mi Perfil</Dropdown.Link>
                                 <Dropdown.Link href={route('logout')} method="post" as="button">Cerrar Sesión</Dropdown.Link>
                             </Dropdown.Content>
