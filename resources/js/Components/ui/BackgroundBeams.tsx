@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, Transition } from "framer-motion";
 
 export const BackgroundBeams = ({ className }: { className?: string }) => {
   const beams = [
@@ -14,7 +14,7 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
         duration: 20,
         repeat: Infinity,
         ease: "linear",
-      },
+      } as Transition,
       color: "from-purple-500/20 via-transparent to-transparent",
     },
     {
@@ -28,7 +28,7 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
           repeat: Infinity,
           ease: "linear",
           delay: 2
-        },
+        } as Transition,
         color: "from-blue-500/20 via-transparent to-transparent",
       },
   ];
@@ -49,7 +49,7 @@ export const BackgroundBeams = ({ className }: { className?: string }) => {
        ))}
        
        {/* Grid Pattern */}
-       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
+       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC42NSIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIvPjwvc3ZnPg==')] opacity-20 brightness-100 contrast-150 mix-blend-overlay"></div>
     </div>
   );
 };

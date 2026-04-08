@@ -46,7 +46,7 @@ export default function Hero() {
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </a>
                         <a 
-                            href="https://wa.me/+56932277455?text=Hola%20quiero%20m%C3%A1s%20informaci%C3%B3n"
+                            href="https://wa.me/+56932277455?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20virtual%20para%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20branding%20y%20dise%C3%B1o%20web."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2 font-semibold"

@@ -1,8 +1,8 @@
 # 🚀 NEOBRANDING 2.0 - ECOSISTEMA DIGITAL UNIFICADO
 
-> **Estado:** Fase de Unificación Completada  
-> **Versión:** 3.0.0 (The Most Modern Product)  
-> **Última Actualización:** Marzo 2026  
+> **Estado:** Fase de Inteligencia de Datos & Conversión Completada  
+> **Versión:** 4.0.0 (Data Intelligence Edition)  
+> **Última Actualización:** 8 de Abril de 2026  
 > **Liderado por:** @MotaZorrilla
 
 ---
@@ -14,8 +14,8 @@ Transformar la presencia digital de Neobranding en una **experiencia inmersiva y
 *   **Core:** Laravel 12 + Inertia.js (Monolito SPA).
 *   **UI Engine:** React 18 + Framer Motion 12 (Animaciones Premium).
 *   **Estilos:** Tailwind CSS 4.0 (Utility-first moderno).
-*   **Componentes:** Shadcn/ui + Custom Glassmorphism.
-*   **IA:** Neo AI Assistant (Arquitectura de Agente Prototipo).
+*   **IA:** Neo AI Assistant (Powered by Google Gemini 2.5 Flash + Contextual Memory).
+*   **Data:** Sistema de Telemetría Nativa y Generación Dinámica de PDF (DomPDF).
 
 ---
 
@@ -23,50 +23,41 @@ Transformar la presencia digital de Neobranding en una **experiencia inmersiva y
 El sitio unifica cuatro mundos en una sola interfaz fluida:
 
 1.  **Engineering Lab:** División entre *Software Engineering* (Laravel/React) e *Industrial Engineering* (Renders 3D/Video).
-2.  **Brand Intelligence:** Metodología de marca enfocada en la psicología del consumidor.
+2.  **Brand Intelligence:** Metodología de marca enfocada en psicología del consumidor.
 3.  **Soluciones Comerciales:** Hosting Pro, Mini Web QR, Formación e Impresión.
-4.  **Pricing Engine:** Planes "Inicia tu Web" (Básico, Crece, Pro) optimizados para conversión.
+4.  **Pricing Engine:** Planes "Inicia tu Web" (Básico, Crece, Pro) con CTAs inteligentes.
 
 ---
 
 ## 📜 3. BITÁCORA DE PROGRESO (TRAZABILIDAD)
 
-### ✅ FASE 1: CIMIENTOS Y ESTÉTICA (2025)
-*   Configuración de servidores Vite + Laravel en entorno XAMPP.
-*   Corrección de rutas de assets para portabilidad total.
-*   Inyección de firma ASCII "MotaZ" en el código fuente.
+### ✅ FASE 1 a 7: CIMIENTOS Y ALIADOS (2025 - ABRIL 2026)
+*   Unificación core Laravel 12 + React e integración de Gemini 2.5.
+*   Implementación de carrusel de Aliados y CTAs contextuales de WhatsApp.
+*   Diseño de sección "Nosotros" con imagen de alto impacto (`why.png`).
 
-### ✅ FASE 2: INGENIERÍA INTEGRAL
-*   Implementación de la sección **Engineering Lab** con iconografía técnica.
-*   Sistema de *Hover & Play* para videos de proyectos (Renders, Fachadas, Posadas).
-*   Modales inmersivos a pantalla completa para visualización técnica.
-
-### ✅ FASE 3: PORTAFOLIO Y UX AVANZADA
-*   Sección About/AI destacando liderazgo en ingeniería e IA.
-*   Layout de portafolio asimétrico y dinámico.
-*   Implementación de Lightbox y botón "Back to Top" persistente.
-
-### ✅ FASE 4: EXPANSIÓN REGIONAL Y ASISTENTE IA
-*   Configuración de representantes en **Chile** (René Enviado) y **Venezuela** (Héctor Mota).
-*   Integración funcional de WhatsApp Regional (`wa.me`).
-*   Prototipo del **Neo AI Assistant** (SVG + Framer Motion) con interfaz *Glassmorphism*.
-
-### ✅ FASE 5: UNIFICACIÓN ESTRATÉGICA (MARZO 2026)
-*   **Fusión de Contenidos:** Migración de la inteligencia comercial de `neobranding.cl/site` al nuevo stack.
-*   **Ingeniería de Ventas:** Nuevo Hero con copy de alta conversión y sección de Servicios reestructurada.
-*   **Pricing & Commercial:** Implementación de la sección de Planes Web y Soluciones Comerciales (Hosting, QR, etc.).
-
-### ✅ FASE 6: REFINAMIENTO TÉCNICO Y ESTABILIDAD
-*   Actualización a **Tailwind 4.0** y **Laravel 12**.
-*   Corrección de dependencias y conflictos de importación en componentes React.
-*   Optimización de la navegación (Smooth Scroll) y unificación de IDs de sección.
+### ✅ FASE 8: INTELIGENCIA DE DATOS & CONVERSIÓN (ABRIL 2026)
+*   **Neo Assistant 2.0:**
+    *   Independencia total del componente (`NeoAssistant.tsx`).
+    *   **Memoria Persistente:** Cada charla se guarda en `ai_conversations` y `ai_messages`.
+    *   Libreto de Ventas Senior (Metodología AIDA) para calificar leads y cerrar reuniones.
+*   **Telemetría y Dashboard Real:**
+    *   Implementación de tabla `analytics_events` para tracking de visitas y conversiones.
+    *   KPIs dinámicos en Dashboard: **Visualizaciones**, **CTR** y **Costo por Lead** calculados en tiempo real.
+    *   **Visor de Chats VIP:** Nueva sección administrativa para leer conversaciones completas de Neo.
+*   **Embudo de Ventas (Brochure VIP):**
+    *   Captura de leads profesional (Nombre, Empresa, Email, Teléfono, Áreas de Interés).
+    *   **Generación Dinámica de PDF:** Dossier personalizado de 11 páginas con contenido denso e imágenes de ingeniería inyectadas.
+    *   Normalización inteligente de nombres (Title Case para clientes, UPPERCASE para empresas).
+*   **Gestión de Leads Avanzada:**
+    *   Bandeja de entrada con soporte para Empresa y acceso directo a WhatsApp con mensaje personalizado.
 
 ---
 
 ## 🔮 4. ROADMAP (PRÓXIMOS PASOS)
-1.  **Conectividad IA:** Vincular a "Neo" con APIs reales (Gemini/OpenAI) para consultas dinámicas del ecosistema.
-2.  **Despersonalización Corporativa:** Transicionar el tono de voz de "Portafolio" a "Identidad de Marca Global".
-3.  **SEO & Metadata:** Implementar Open Graph dinámico para todos los servicios y planes.
+1.  **Despersonalización Corporativa:** Transicionar los últimos detalles del tono de voz de "Portafolio Personal" a "Identidad de Marca Global".
+2.  **SEO & Metadata:** Implementar Open Graph dinámico para todos los servicios y planes.
+3.  **Dashboard Dark/Light:** Implementar switch de modo claro para administración (Opcional).
 4.  **Optimización LCP:** Ajustes finales para carga instantánea en entornos de baja conectividad.
 
 ---

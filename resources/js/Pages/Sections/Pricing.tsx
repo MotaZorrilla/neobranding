@@ -18,7 +18,8 @@ const plans = [
         icon: <Shield className="w-6 h-6" />,
         color: "from-blue-500/20 to-indigo-500/20",
         borderColor: "border-blue-500/20",
-        popular: false
+        popular: false,
+        whatsappMessage: "Hola, estoy interesado en contratar el Plan Básico para iniciar mi presencia web."
     },
     {
         name: "Plan Crece",
@@ -37,7 +38,8 @@ const plans = [
         icon: <Zap className="w-6 h-6 text-yellow-400" />,
         color: "from-purple-500/20 to-pink-500/20",
         borderColor: "border-purple-500/50",
-        popular: true
+        popular: true,
+        whatsappMessage: "Hola, me interesa el Plan Crece. Quisiera potenciar mi negocio con este plan web."
     },
     {
         name: "Plan Pro",
@@ -56,7 +58,8 @@ const plans = [
         icon: <Globe className="w-6 h-6" />,
         color: "from-orange-500/20 to-red-500/20",
         borderColor: "border-orange-500/20",
-        popular: false
+        popular: false,
+        whatsappMessage: "Hola, estoy interesado en el Plan Pro. Necesito una tienda online o un proyecto de alto impacto."
     }
 ];
 
@@ -73,8 +76,8 @@ export default function Pricing() {
                     viewport={{ once: true }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Planes <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Inicia tu Web</span>
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 uppercase tracking-tight">
+                        Planes <span className="relative inline-block px-4 py-1 mx-2 border-2 md:border-4 border-purple-500 rounded-2xl text-purple-400 -rotate-3 font-black shadow-[0_0_20px_rgba(168,85,247,0.5)] bg-slate-900/80">Promo</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Inicia tu Web</span>
                     </h2>
                     <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
                         Todo lo que necesitas para que tu marca no solo exista, sino que domine su mercado. Pagos mensuales con todo incluido.
@@ -128,7 +131,7 @@ export default function Pricing() {
                                 </ul>
 
                                 <a 
-                                    href={`https://wa.me/+56932277455?text=Hola%20interesado%20en%20el%20${plan.name}`}
+                                    href={`https://wa.me/+56932277455?text=${encodeURIComponent(plan.whatsappMessage)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={`w-full py-4 rounded-2xl flex items-center justify-center gap-2 font-bold transition-all duration-300 ${
@@ -152,7 +155,7 @@ export default function Pricing() {
                 >
                     <p className="text-slate-400 mb-6">¿Necesitas algo a la medida o un proyecto más complejo?</p>
                     <a 
-                        href="https://wa.me/+56932277455?text=Hola%20necesito%20un%20proyecto%20a%20medida"
+                        href="https://wa.me/+56932277455?text=Hola%2C%20necesito%20un%20proyecto%20a%20medida.%20Me%20gustar%C3%ADa%20hablar%20con%20un%20experto%20para%20definir%20los%20requerimientos%20de%20mi%20marca."
                         className="text-white font-bold inline-flex items-center gap-2 group hover:text-purple-400 transition-colors"
                     >
                         Habla con un Experto 

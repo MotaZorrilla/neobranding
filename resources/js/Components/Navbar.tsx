@@ -33,7 +33,7 @@ export default function Navbar() {
             <div className="container mx-auto px-6 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
-                    <img src="images/logopositivo.png" alt="Neobranding" className="h-8 md:h-10 w-auto transition-transform group-hover:scale-105" />
+                    <img src="images/logotipo.png" alt="Neobranding" className="h-10 md:h-12 w-auto transition-transform group-hover:scale-105" />
                 </Link>
 
                 {/* Desktop Nav */}
@@ -53,7 +53,7 @@ export default function Navbar() {
                         href={route('login')} 
                         className="px-5 py-2 rounded-full text-sm font-semibold bg-white text-slate-950 hover:bg-purple-500 hover:text-white transition-all shadow-lg hover:shadow-purple-500/25"
                     >
-                        Acceso Clientes
+                        Acceso
                     </Link>
                 </nav>
 
@@ -89,7 +89,7 @@ export default function Navbar() {
                             href={route('login')} 
                             className="inline-block text-center w-full px-5 py-3 rounded-lg text-sm font-semibold bg-purple-600 text-white"
                         >
-                            Acceso Clientes
+                            Acceso
                         </Link>
                     </div>
                 </motion.div>

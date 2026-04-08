@@ -32,38 +32,57 @@ const services = [
     }
 ];
 
-export default function Services() {
+export default function Services({ onOpenModal }: { onOpenModal: (type: string) => void }) {
+    const services = [
+        {
+            id: 'marca',
+            icon: <Brain className="w-8 h-8" />,
+            title: "Marca Inteligente",
+            description: "No solo diseñamos logotipos; creamos identidades que dominan mercados fusionando psicología del consumidor con diseño de vanguardia.",
+            features: ["Brand Intelligence", "Arquitectura de Marca", "Identidad Visual", "Naming"],
+            color: "from-purple-500 to-indigo-600"
+        },
+        {
+            id: 'presencia',
+            icon: <Globe className="w-8 h-8" />,
+            title: "Presencia Digital",
+            description: "Ecosistemas digitales donde el diseño UI/UX y el Marketing 360° trabajan para atraer, cautivar y convertir prospectos.",
+            features: ["Desarrollo Web", "Estrategia 360", "SEO & Contenido", "Automatización"],
+            color: "from-blue-500 to-cyan-500"
+        },
+        {
+            id: 'academy',
+            icon: <GraduationCap className="w-8 h-8" />,
+            title: "Neobranding Academy",
+            description: "Formación práctica y especializada. Talleres y asesorías para que tú o tu equipo lideren la evolución de su mercado.",
+            features: ["Cursos Online", "Talleres Intensivos", "Asesoría Personalizada", "Metodología Neo"],
+            color: "from-orange-500 to-pink-500"
+        },
+        {
+            id: 'soluciones',
+            icon: <LayoutGrid className="w-8 h-8" />,
+            title: "Soluciones Pro",
+            description: "Herramientas diseñadas para acelerar tu negocio: desde hosting de alta velocidad hasta mini-webs de contacto.",
+            features: ["Hosting Premium", "Mini Web QR", "Soluciones de Impresión", "Soporte VIP"],
+            color: "from-emerald-500 to-teal-500"
+        }
+    ];
+
     return (
         <section id="services" className="py-32 bg-slate-950 relative overflow-hidden">
-            {/* Background Decorations */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
-
+            {/* ... decoraciones ... */}
             <div className="container mx-auto px-6 relative z-10">
-                <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-center mb-20"
-                >
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                        Ecosistema de <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Servicios</span>
-                    </h2>
-                    <p className="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                        Impulsamos la visibilidad de tu marca fusionando estrategias digitales de vanguardia con soluciones de personalización únicas.
-                    </p>
-                </motion.div>
-
+                {/* ... cabecera ... */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
                         <motion.div
                             key={index}
+                            onClick={() => service.id !== 'soluciones' ? onOpenModal(service.id) : window.location.href='#commercial'}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group relative p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all duration-500 hover:-translate-y-2"
+                            className="group relative p-8 rounded-[2.5rem] bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all duration-500 hover:-translate-y-2 cursor-pointer"
                         >
                             {/* Glow Effect */}
                             <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500 rounded-[2.5rem]`} />
